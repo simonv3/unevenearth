@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+  color: $font-black;
+  text-decoration: none;
+  text-shadow: none;
+  border-bottom: 1px solid red;
+  -webkit-transition: background-color $transition-time;
+  -moz-transition: background-color $transition-time;
+  transition: background-color $transition-time;
+}
+
+a:visited {
+  color: $font-black;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: $font-black;
+  background-color: white;
+}
+
+a:focus {
+  outline: thin dotted;
+}

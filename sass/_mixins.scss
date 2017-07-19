@@ -1,0 +1,24 @@
+@mixin max-width () {
+  max-width: $page-width;
+  margin: 0 auto;
+}
+
+@mixin header ($header, $weight: 100) {
+  font-family: $header;
+  font-weight: $weight;
+}
+
+@mixin placeholder ($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+     color: $color;
+  }
+}

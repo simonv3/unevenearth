@@ -1,0 +1,68 @@
+/*--------------------------------------------------------------
+## Front page
+--------------------------------------------------------------*/
+.entry-header {
+  position: relative;
+
+  &:hover {
+    .entry-meta {
+      opacity: 1;
+    }
+  }
+}
+
+.entry-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255,255,255,0.9);
+  width: 100%;
+  padding: 1rem .5rem .5rem 1rem;
+
+  -webkit-transition: background-color $transition-time;
+  -moz-transition: background-color $transition-time;
+  transition: background-color $transition-time;
+
+  &:hover {
+    background-color: white;
+  }
+
+  .entry-title {
+    font-size: 2rem;
+    border-bottom: 1px solid $red;
+    display: inline-block;
+  }
+
+  .entry-subtitle {
+    font-size: 1rem;
+    margin: .5rem 0;
+  }
+
+  .entry-meta {
+    margin: 1rem 0 .5rem;
+    opacity: 0;
+
+    -webkit-transition: opacity $transition-time;
+    -moz-transition: opacity $transition-time;
+    transition: opacity $transition-time;
+  }
+}
+
+.no-thumbnail {
+  min-height: 300px;
+
+  .entry-header {
+    min-height: 300px;
+    background-image: url('img/pattern2.png');
+  }
+}
+
+.front-page-category {
+  font-size: 2rem;
+  float: right;
+  font-family: "Fira Sans OT";
+  font-weight: 100;
+  margin-top: -.1rem;
+  margin-right: .5rem;
+  padding: .1rem 1rem 0;
+  border: 1px solid red;
+}

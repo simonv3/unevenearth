@@ -1,0 +1,65 @@
+.site-branding .search-form {
+  float: right;
+  top: 0; right: 0;
+  position: absolute;
+
+  label {
+    width: 100%;
+    display: inline-block;
+    z-index: 1;
+  }
+
+  input[type="search"] {
+    @include placeholder(transparent);
+    width: 67px;
+    background-color: $background-gray;
+    border: none;
+    border-radius: 0;
+    float: right;
+    font-size: 1.6rem;
+    padding: .7rem 0 .5rem .2rem;
+    border-top: 1px solid darken($background-gray, 10%);
+    transition: width $transition-time;
+    z-index: 0;
+
+    &:active,
+    &:focus {
+      @include placeholder(darken($background-gray, 10%));
+      width: 300px;
+    }
+  }
+
+  input[type="submit"] {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    z-index: 20;
+    font: 400 50px/1 dashicons !important;
+    content: "\f179";
+    pointer-events: none;
+    cursor: pointer;
+    color: darken($background-gray, 10%);
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .site-branding {
+    .search-form {
+      position: relative;
+      width: 100%;
+
+      input[type="search"] {
+        &:active,
+        &:focus {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+

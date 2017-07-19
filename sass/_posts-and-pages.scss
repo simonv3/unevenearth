@@ -1,0 +1,78 @@
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+p {
+  max-width: $page-width / 3 * 2;
+}
+
+.sticky {
+  display: block;
+}
+
+.hentry {
+  margin: 0 0 1.5rem;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.attachment-post-thumbnail {
+  min-height: 300px;
+  display: block;
+}
+
+.attachment-post-thumbnail,
+figure img {
+  background-image: $background-pattern;
+
+  &.size-large {
+    min-height: 300px;
+  }
+}
+
+.site-content {
+  @media (max-width: 480px) {
+    padding: .5rem;
+  }
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 2rem 0 0;
+
+  @include max-width;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+
+.single {
+  .entry-header {
+    margin-bottom: 2rem;
+  }
+}
+
+.entry-footer {
+  span {
+    display: block;
+  }
+}
+
+.nav-previous::before,
+.nav-next::before {
+  margin-right: .5rem;
+  display: inline-block;
+}
+
+.nav-previous::before {
+  content: 'Previously: ';
+}
+
+.nav-next::before {
+  content: 'Next: ';
+}
