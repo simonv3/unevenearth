@@ -9,3 +9,49 @@
 .bypostauthor {
   display: block;
 }
+
+.comments-title {
+  line-height: 3;
+}
+
+.comment-author {
+
+  img {
+    border-radius: 100%;
+  }
+
+  * {
+    vertical-align: middle;
+  }
+}
+
+.comment-metadata {
+  @include header();
+}
+
+.reply {
+  margin: -1rem 0 1rem;
+
+  a::before {
+    background-image: url(img/reply.svg);
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: '';
+    display: inline-block;
+  }
+}
+
+.comment-form {
+  margin-bottom: 1.6rem;
+
+  p {
+    margin: .5rem 0;
+  }
+
+  label {
+    width: 100px;
+    display: inline-block;
+  }
+}

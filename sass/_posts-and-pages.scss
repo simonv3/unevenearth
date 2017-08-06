@@ -56,7 +56,7 @@ figure img {
 }
 
 .entry-meta {
-  @include header($header-font-family);
+  @include header();
 }
 
 .page-links {

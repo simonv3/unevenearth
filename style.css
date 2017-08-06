@@ -741,8 +741,7 @@ footer {
     content: '';
     display: block;
     pointer-events: none;
-    cursor: pointer;
-    color: #d4d4d4; }
+    cursor: pointer; }
 
 .search-results .search-form input[type="search"] {
   width: 300px; }
@@ -836,15 +835,21 @@ footer {
 .widget select {
   max-width: 100%; }
 
+.widget_recent_entries ul {
+  margin: 0;
+  padding: 0; }
+  .widget_recent_entries ul li {
+    list-style: none; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Front page
 --------------------------------------------------------------*/
-.entry-header {
+.front-page .entry-header {
   position: relative; }
-  .entry-header:hover .entry-meta {
+  .front-page .entry-header:hover .entry-meta {
     opacity: 1; }
 
 .front-page .entry-info {
@@ -963,6 +968,37 @@ figure img {
 
 .bypostauthor {
   display: block; }
+
+.comments-title {
+  line-height: 3; }
+
+.comment-author img {
+  border-radius: 100%; }
+.comment-author * {
+  vertical-align: middle; }
+
+.comment-metadata {
+  font-family: "Fira Sans OT", "Helvetica", sans-serif;
+  font-weight: 300; }
+
+.reply {
+  margin: -1rem 0 1rem; }
+  .reply a::before {
+    background-image: url(img/reply.svg);
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: '';
+    display: inline-block; }
+
+.comment-form {
+  margin-bottom: 1.6rem; }
+  .comment-form p {
+    margin: .5rem 0; }
+  .comment-form label {
+    width: 100px;
+    display: inline-block; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
