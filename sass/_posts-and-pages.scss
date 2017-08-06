@@ -45,6 +45,20 @@ figure img {
   @include max-width;
 }
 
+.entry-title {
+  @include header($header-font-family, 400);
+  font-size: 2rem;
+}
+
+.entry-subtitle {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.entry-meta {
+  @include header($header-font-family);
+}
+
 .page-links {
   clear: both;
   margin: 0 0 1.5em;

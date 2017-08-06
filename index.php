@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area front-page">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( is_active_sidebar( 'front_page_intro_1' ) ) : ?>

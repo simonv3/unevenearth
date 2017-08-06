@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-@mixin header ($header, $weight: 100) {
+@mixin header ($header, $weight: 300) {
   font-family: $header;
   font-weight: $weight;
 }

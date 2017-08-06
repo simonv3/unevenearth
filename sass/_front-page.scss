@@ -11,7 +11,7 @@
   }
 }
 
-.entry-info {
+.front-page .entry-info {
   position: absolute;
   bottom: 0;
   background: rgba(255,255,255,0.9);
@@ -27,14 +27,8 @@
   }
 
   .entry-title {
-    font-size: 2rem;
     border-bottom: 1px solid $red;
     display: inline-block;
-  }
-
-  .entry-subtitle {
-    font-size: 1rem;
-    margin: .5rem 0;
   }
 
   .entry-meta {
