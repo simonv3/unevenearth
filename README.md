@@ -1,5 +1,7 @@
 # This is the theme for Unevenearth
 
+To install it, [download it from GitHub](https://github.com/simonv3/unevenearth/archive/master.zip) and install it in your theme directory.
+
 # Development.
 
 It's highly recommended that you use VVV to develop for this theme. That way you don't have to worry about any server dependencies and can just focus on what things look like.
@@ -30,3 +32,4 @@ sass --watch sass/main.scss:style.css
 ## Troubleshooting
 
 If `vagrant up` leaves you with a "no connection possible" type of page, try running "vagrant halt" first.
+
