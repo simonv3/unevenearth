@@ -993,7 +993,9 @@ object {
   margin: 0.8075em 0; }
 
 .wp-caption-text {
-  text-align: center; }
+  text-align: center;
+  font-size: small;
+  font-family: "Fira Sans OT", "Helvetica", sans-serif; }
 
 /*--------------------------------------------------------------
 ## Galleries

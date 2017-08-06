@@ -32,3 +32,7 @@ Now you can change watch for sass changes while developing:
 ```
 sass --watch sass/main.scss:style.css
 ```
+
+## Troubleshooting
+
+If `vagrant up` leaves you with a "no connection possible" type of page, try running "vagrant halt" first.
