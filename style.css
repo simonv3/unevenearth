@@ -864,8 +864,36 @@ footer {
   .front-page .entry-info:hover {
     background-color: white; }
   .front-page .entry-info .entry-title {
-    border-bottom: 1px solid #ff3706;
+    position: relative;
+    padding-top: .3rem;
     display: inline-block; }
+    .front-page .entry-info .entry-title::before, .front-page .entry-info .entry-title::after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #ff3706;
+      content: '';
+      -webkit-transition: -webkit-transform 0.3s;
+      -moz-transition: -moz-transform 0.3s;
+      transition: transform 0.3s;
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      transform: scale(1.05);
+      z-index: 99998; }
+    .front-page .entry-info .entry-title::after {
+      opacity: 0;
+      -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+      -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+      transition: top 0.3s, opacity 0.3s, transform 0.3s; }
+    .front-page .entry-info .entry-title:hover::before, .front-page .entry-info .entry-title:hover::after, .front-page .entry-info .entry-title:focus::before, .front-page .entry-info .entry-title:focus::after {
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      transform: scale(1.05); }
+    .front-page .entry-info .entry-title:hover::after, .front-page .entry-info .entry-title:focus::after {
+      top: 0%;
+      opacity: 1; }
   .front-page .entry-info .entry-meta {
     margin: 1rem 0 .5rem;
     opacity: 0;

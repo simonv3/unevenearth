@@ -40,45 +40,7 @@
     outline: 0;
   }
 
-  &::before,
-  &::after {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: $red;
-    content: '';
-    -webkit-transition: -webkit-transform $transition-time;
-    -moz-transition: -moz-transform $transition-time;
-    transition: transform $transition-time;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    transform: scale(1.05);
-    z-index: $menu-z-index - 1;
-  }
-
-  &::after {
-    opacity: 0;
-    -webkit-transition: top $transition-time, opacity $transition-time, -webkit-transform $transition-time;
-    -moz-transition: top $transition-time, opacity $transition-time, -moz-transform $transition-time;
-    transition: top $transition-time, opacity $transition-time, transform $transition-time;
-  }
-
-  &:hover::before,
-  &:hover::after,
-  &:focus::before,
-  &:focus::after {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-
-  &:hover::after,
-  &:focus::after {
-    top: 0%;
-    opacity: 1;
-  }
+  @include menu-hover-over-effect();
 }
 
 .main-navigation ul ul {

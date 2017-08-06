@@ -27,8 +27,11 @@
   }
 
   .entry-title {
-    border-bottom: 1px solid $red;
+    position: relative;
+    padding-top: .3rem;
     display: inline-block;
+
+    @include menu-hover-over-effect();
   }
 
   .entry-meta {
