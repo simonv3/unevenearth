@@ -36,9 +36,6 @@
     -webkit-transition: -webkit-transform $transition-time;
     -moz-transition: -moz-transform $transition-time;
     transition: transform $transition-time;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    transform: scale(1.05);
     z-index: $menu-z-index - 1;
   }
 
@@ -47,15 +44,6 @@
     -webkit-transition: top $transition-time, opacity $transition-time, -webkit-transform $transition-time;
     -moz-transition: top $transition-time, opacity $transition-time, -moz-transform $transition-time;
     transition: top $transition-time, opacity $transition-time, transform $transition-time;
-  }
-
-  &:hover::before,
-  &:hover::after,
-  &:focus::before,
-  &:focus::after {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    transform: scale(1.05);
   }
 
   &:hover::after,
