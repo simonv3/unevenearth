@@ -38,12 +38,21 @@
     top: 6px;
     right: 5px;
     z-index: 20;
-    font: 400 50px/1 dashicons !important;
-    content: "\f179";
+    background-image: url(img/search.svg);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: '';
+    display: block;
     pointer-events: none;
     cursor: pointer;
     color: darken($background-gray, 10%);
   }
+}
+
+.search-results .search-form input[type="search"]{
+  width: 300px;
 }
 
 /* Landscape phones and down */

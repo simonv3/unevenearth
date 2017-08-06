@@ -14,17 +14,11 @@ vagrant up
 
 You'll have unevenearth installed. You can access it by going to http://local.wordpress.dev. The username / password combo is `admin` & `password`
 
-Then let's install our sass dependencies (Bourbon and Sass):
+Then let's install our sass dependencies (Sass):
 
 ```
 gem install bundler
 bundle install
-```
-
-And install bourbon:
-
-```
-cd sass && bourbon install
 ```
 
 Now you can change watch for sass changes while developing:
