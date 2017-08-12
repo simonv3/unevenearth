@@ -17,9 +17,7 @@
       the_post_thumbnail();
     endif;
     ?>
-    <?php echo('<a href="'.esc_url(get_permalink()).'">'); ?>
-    <div class="entry-info">
-
+  </header><?php echo('<a href="'.esc_url(get_permalink()).'" class="entry-info">'); ?>
       <?php unevenearth_find_matching_categories(); ?>
 
       <?php
@@ -32,12 +30,5 @@
       </div><!-- .entry-meta -->
       <?php
       endif; ?>
-
-    </div>
   </a>
-  </header><!-- .entry-header -->
-
-  <footer class="entry-footer">
-    <!-- <?php unevenearth_entry_footer(); ?> -->
-  </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

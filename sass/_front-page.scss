@@ -1,65 +1,110 @@
 /*--------------------------------------------------------------
 ## Front page
 --------------------------------------------------------------*/
-.front-page .entry-header {
-  position: relative;
 
-  &:hover {
+$front-page-height: 240px;
+
+.front-page {
+  .attachment-post-thumbnail {
+    display: inline-block;
+    height: $front-page-height;
+  }
+
+  .post {
+    clear: both;
+    min-height: $front-page-height;
+    position: relative;
+
+    &:nth-child(odd) {
+      .entry-header,
+      .entry-info {
+        float: right;
+      }
+
+      .entry-header {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .entry-header {
+    vertical-align: top;
+    float: left;
+    display: inline-block;
+    width: $page-width / 3 - 2;
+
+
+    &:hover {
+      .entry-meta {
+        opacity: 1;
+      }
+    }
+  }
+
+  .entry-info {
+    vertical-align: top;
+    display: inline-block;
+    float: left;
+    width: ($page-width / 3 * 2) - 2;
+    background: rgba(255,255,255,0.9);
+    padding: 1rem .5rem .5rem 1rem;
+    position: absolute;
+    height: 100%;
+    border-bottom: none;
+
+    -webkit-transition: background-color $transition-time;
+    -moz-transition: background-color $transition-time;
+    transition: background-color $transition-time;
+
+    &:hover {
+      background-color: white;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .entry-title {
+      max-width: 350px;
+      position: relative;
+      padding-top: .3rem;
+      display: inline-block;
+
+      @include menu-hover-over-effect();
+    }
+
+    .entry-subtitle {
+      font-size: 1.2rem;
+      margin-top: .5rem;
+    }
+
     .entry-meta {
-      opacity: 1;
+      margin: 1rem 0 .5rem;
+      opacity: 0;
+
+      -webkit-transition: opacity $transition-time;
+      -moz-transition: opacity $transition-time;
+      transition: opacity $transition-time;
     }
   }
 }
 
-.front-page .entry-info {
-  position: absolute;
-  bottom: 0;
-  background: rgba(255,255,255,0.9);
-  width: 100%;
-  padding: 1rem .5rem .5rem 1rem;
-
-  -webkit-transition: background-color $transition-time;
-  -moz-transition: background-color $transition-time;
-  transition: background-color $transition-time;
-
-  &:hover {
-    background-color: white;
-  }
-
-  .entry-title {
-    position: relative;
-    padding-top: .3rem;
-    display: inline-block;
-
-    @include menu-hover-over-effect();
-  }
-
-  .entry-meta {
-    margin: 1rem 0 .5rem;
-    opacity: 0;
-
-    -webkit-transition: opacity $transition-time;
-    -moz-transition: opacity $transition-time;
-    transition: opacity $transition-time;
-  }
-}
-
 .no-thumbnail {
-  min-height: 300px;
+  min-height: $front-page-height;
 
   .entry-header {
-    min-height: 300px;
+    min-height: $front-page-height;
     background-image: url('img/pattern2.png');
   }
 }
 
 .front-page-category {
-  font-size: 2rem;
+  font-size: 1.5rem;
   float: right;
   font-family: "Fira Sans OT";
   font-weight: 100;
   margin-top: -.1rem;
   margin-right: .5rem;
-  padding: .1rem 1rem 0;
+  padding: .2rem 1rem 0;
   border: 1px solid red;
 }

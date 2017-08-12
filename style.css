@@ -643,7 +643,7 @@ a:focus {
 h1,
 h2,
 div {
-  max-width: 960px;
+  max-width: 840px;
   margin: 0 auto; }
 
 .site-branding {
@@ -670,7 +670,7 @@ div {
     color: #333333; }
 
 footer {
-  max-width: 960px;
+  max-width: 840px;
   margin: 0 auto; }
 
 .site-branding .search-form {
@@ -840,23 +840,44 @@ footer {
 /*--------------------------------------------------------------
 ## Front page
 --------------------------------------------------------------*/
-.front-page .entry-header {
+.front-page .attachment-post-thumbnail {
+  display: inline-block;
+  height: 240px; }
+.front-page .post {
+  clear: both;
+  min-height: 240px;
   position: relative; }
+  .front-page .post:nth-child(odd) .entry-header,
+  .front-page .post:nth-child(odd) .entry-info {
+    float: right; }
+  .front-page .post:nth-child(odd) .entry-header {
+    margin-right: 4px; }
+.front-page .entry-header {
+  vertical-align: top;
+  float: left;
+  display: inline-block;
+  width: 278px; }
   .front-page .entry-header:hover .entry-meta {
     opacity: 1; }
-
 .front-page .entry-info {
-  position: absolute;
-  bottom: 0;
+  vertical-align: top;
+  display: inline-block;
+  float: left;
+  width: 558px;
   background: rgba(255, 255, 255, 0.9);
-  width: 100%;
   padding: 1rem .5rem .5rem 1rem;
+  position: absolute;
+  height: 100%;
+  border-bottom: none;
   -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   transition: background-color 0.3s; }
   .front-page .entry-info:hover {
     background-color: white; }
+  .front-page .entry-info h2 {
+    font-size: 1.5rem; }
   .front-page .entry-info .entry-title {
+    max-width: 350px;
     position: relative;
     padding-top: .3rem;
     display: inline-block; }
@@ -880,6 +901,9 @@ footer {
     .front-page .entry-info .entry-title:hover::after, .front-page .entry-info .entry-title:focus::after {
       top: 0%;
       opacity: 1; }
+  .front-page .entry-info .entry-subtitle {
+    font-size: 1.2rem;
+    margin-top: .5rem; }
   .front-page .entry-info .entry-meta {
     margin: 1rem 0 .5rem;
     opacity: 0;
@@ -888,26 +912,26 @@ footer {
     transition: opacity 0.3s; }
 
 .no-thumbnail {
-  min-height: 300px; }
+  min-height: 240px; }
   .no-thumbnail .entry-header {
-    min-height: 300px;
+    min-height: 240px;
     background-image: url("img/pattern2.png"); }
 
 .front-page-category {
-  font-size: 2rem;
+  font-size: 1.5rem;
   float: right;
   font-family: "Fira Sans OT";
   font-weight: 100;
   margin-top: -.1rem;
   margin-right: .5rem;
-  padding: .1rem 1rem 0;
+  padding: .2rem 1rem 0;
   border: 1px solid red; }
 
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 p {
-  max-width: 640px; }
+  max-width: 630px; }
 
 .sticky {
   display: block; }
@@ -919,7 +943,6 @@ p {
   display: none; }
 
 .attachment-post-thumbnail {
-  min-height: 300px;
   display: block; }
 
 .attachment-post-thumbnail,
@@ -937,7 +960,7 @@ figure img {
 .entry-content,
 .entry-summary {
   margin: 2rem 0 0;
-  max-width: 960px;
+  max-width: 840px;
   margin: 0 auto; }
 
 .entry-title {
@@ -979,6 +1002,8 @@ figure img {
 --------------------------------------------------------------*/
 .comment-content a {
   word-wrap: break-word; }
+.comment-content br {
+  margin-bottom: 1rem; }
 
 .bypostauthor {
   display: block; }

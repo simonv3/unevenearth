@@ -2,8 +2,14 @@
 ## Comments
 --------------------------------------------------------------*/
 
-.comment-content a {
-  word-wrap: break-word;
+.comment-content {
+  a {
+    word-wrap: break-word;
+  }
+
+  br {
+    margin-bottom: 1rem;
+  }
 }
 
 .bypostauthor {
