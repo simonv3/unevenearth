@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*!
-Theme Name: Uneven Earth
-Theme URI: http://unevenearth.org/
-Author: Simon Vansintjan
-Author URI: http://simon.vansintjan.net/
-Description: A conversation about environmental justice
+Theme Name: unevenearth
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -675,7 +675,7 @@ footer {
 
 .site-branding .search-form {
   float: right;
-  top: 0;
+  bottom: -10px;
   right: 0;
   position: absolute; }
   .site-branding .search-form label {
@@ -684,51 +684,60 @@ footer {
     z-index: 1; }
   .site-branding .search-form input[type="search"] {
     width: 67px;
-    background-color: #ededed;
+    font-family: poiret-one, "Fira Sans OT", "Helvetica", sans-serif;
+    background-color: transparent;
     border: none;
     border-radius: 0;
     float: right;
-    font-size: 1.6rem;
-    padding: .7rem 0 .5rem .2rem;
-    border-top: 1px solid #d4d4d4;
+    font-size: 1.2rem;
+    border-top: 1px solid #bababa;
     transition: width 0.3s;
     z-index: 0; }
     .site-branding .search-form input[type="search"]::-webkit-input-placeholder {
       /* WebKit browsers */
+      font-family: poiret-one, "Fira Sans OT", "Helvetica", sans-serif;
       color: transparent; }
     .site-branding .search-form input[type="search"]:-moz-placeholder {
       /* Mozilla Firefox 4 to 18 */
+      font-family: poiret-one, "Fira Sans OT", "Helvetica", sans-serif;
       color: transparent; }
     .site-branding .search-form input[type="search"]::-moz-placeholder {
       /* Mozilla Firefox 19+ */
+      font-family: poiret-one, "Fira Sans OT", "Helvetica", sans-serif;
       color: transparent; }
     .site-branding .search-form input[type="search"]:-ms-input-placeholder {
       /* Internet Explorer 10+ */
+      font-family: poiret-one, "Fira Sans OT", "Helvetica", sans-serif;
       color: transparent; }
     .site-branding .search-form input[type="search"]:active, .site-branding .search-form input[type="search"]:focus {
       width: 300px; }
       .site-branding .search-form input[type="search"]:active::-webkit-input-placeholder, .site-branding .search-form input[type="search"]:focus::-webkit-input-placeholder {
         /* WebKit browsers */
-        color: #d4d4d4; }
+        font-family: poiret-one, "Fira Sans OT", "Helvetica", sans-serif;
+        color: #bababa; }
       .site-branding .search-form input[type="search"]:active:-moz-placeholder, .site-branding .search-form input[type="search"]:focus:-moz-placeholder {
         /* Mozilla Firefox 4 to 18 */
-        color: #d4d4d4; }
+        font-family: poiret-one, "Fira Sans OT", "Helvetica", sans-serif;
+        color: #bababa; }
       .site-branding .search-form input[type="search"]:active::-moz-placeholder, .site-branding .search-form input[type="search"]:focus::-moz-placeholder {
         /* Mozilla Firefox 19+ */
-        color: #d4d4d4; }
+        font-family: poiret-one, "Fira Sans OT", "Helvetica", sans-serif;
+        color: #bababa; }
       .site-branding .search-form input[type="search"]:active:-ms-input-placeholder, .site-branding .search-form input[type="search"]:focus:-ms-input-placeholder {
         /* Internet Explorer 10+ */
-        color: #d4d4d4; }
+        font-family: poiret-one, "Fira Sans OT", "Helvetica", sans-serif;
+        color: #bababa; }
   .site-branding .search-form input[type="submit"] {
     display: none; }
   .site-branding .search-form::before {
     position: absolute;
-    top: 6px;
+    top: 0;
+    margin-top: .4rem;
     right: 5px;
     z-index: 20;
     background-image: url(img/search.svg);
-    width: 50px;
-    height: 50px;
+    width: 1.4rem;
+    height: 1.4rem;
     background-repeat: no-repeat;
     background-size: 100%;
     content: '';
@@ -736,7 +745,8 @@ footer {
     pointer-events: none;
     cursor: pointer; }
 
-.search-results .search-form input[type="search"] {
+.search-results .search-form input[type="search"],
+.search-no-results .search-form input[type="search"] {
   width: 300px; }
 
 /* Landscape phones and down */
@@ -744,8 +754,17 @@ footer {
   .site-branding .search-form {
     position: relative;
     width: 100%; }
-    .site-branding .search-form input[type="search"]:active, .site-branding .search-form input[type="search"]:focus {
-      width: 100%; } }
+    .site-branding .search-form label {
+      width: 75%; }
+    .site-branding .search-form::before {
+      display: none; }
+    .site-branding .search-form input[type="search"] {
+      width: 100%; }
+      .site-branding .search-form input[type="search"]:active, .site-branding .search-form input[type="search"]:focus {
+        width: 100%; }
+    .site-branding .search-form input[type="submit"] {
+      vertical-align: top;
+      display: inline-block; } }
 /*--------------------------------------------------------------
 # Extras
 --------------------------------------------------------------*/
