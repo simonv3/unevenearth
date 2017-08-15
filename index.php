@@ -20,7 +20,7 @@ get_header(); ?>
 			<?php dynamic_sidebar( 'front_page_intro_1' ); ?>
 		</div>
 	<?php else: ?>
-		Not active
+		<!-- Not active -->
 	<?php endif; ?>
 
 		<?php
