@@ -861,7 +861,8 @@ footer {
 --------------------------------------------------------------*/
 .front-page .attachment-post-thumbnail {
   display: inline-block;
-  height: 240px; }
+  height: 240px;
+  object-fit: cover; }
 .front-page .post {
   clear: both;
   min-height: 240px;

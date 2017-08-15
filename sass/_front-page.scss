@@ -8,6 +8,7 @@ $front-page-height: 240px;
   .attachment-post-thumbnail {
     display: inline-block;
     height: $front-page-height;
+    object-fit: cover;
   }
 
   .post {
