@@ -51,6 +51,7 @@ body.single-post {
   
   .entry-header,
   .navigation.post-navigation,
+  #disqus_thread,
   #comments,
   aside#secondary { 
     @include max-width;
