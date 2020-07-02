@@ -640,9 +640,7 @@ a:focus {
     margin: 1rem 0 0; }
     .main-navigation li a {
       padding-left: 1rem; } }
-h1,
-h2,
-div {
+header#masthead {
   max-width: 840px;
   margin: 0 auto; }
 
@@ -958,8 +956,9 @@ footer {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-p {
-  max-width: 630px; }
+.site-content {
+  max-width: 840px;
+  margin: 0 auto; }
 
 .sticky {
   display: block; }
@@ -984,12 +983,37 @@ figure img {
   .site-content {
     padding: .5rem; } }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 2rem 0 0;
-  max-width: 840px;
-  margin: 0 auto; }
+.page-content {
+  margin: 2rem 0 0; }
+
+body.single-post {
+  background: white; }
+  body.single-post .entry-header,
+  body.single-post .navigation.post-navigation,
+  body.single-post #comments,
+  body.single-post aside#secondary {
+    max-width: 840px;
+    margin: 0 auto; }
+  body.single-post .site-content {
+    max-width: none; }
+  body.single-post .entry-content > * {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto; }
+  body.single-post .entry-content > *.width-wider {
+    width: 100%;
+    max-width: none; }
+    @media (min-width: 1000px) {
+      body.single-post .entry-content > *.width-wider {
+        max-width: 85%;
+        max-width: 85vw; } }
+  body.single-post .entry-content > *.width-viewport {
+    width: 100%;
+    max-width: none; }
+  body.single-post .entry-content .wp-block-image img {
+    display: block; }
+  body.single-post .entry-content figure + figure {
+    margin-top: 0; }
 
 .entry-title {
   font-family: "Fira Sans OT", "Helvetica", sans-serif;

@@ -1,9 +1,13 @@
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-p {
-  max-width: $page-width / 4 * 3;
+
+// By default, the primary content column is limited to the "standard" width
+// however, this will be undone for single-posts below
+.site-content {
+  @include max-width;
 }
+
 
 .sticky {
   display: block;
@@ -36,12 +40,53 @@ figure img {
   }
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 2rem 0 0;
+.page-content {
+  margin: 2rem 0 0; 
+}
 
-  @include max-width;
+// Single post customization
+
+body.single-post {
+  background: white;
+  
+  .entry-header,
+  .navigation.post-navigation,
+  #comments,
+  aside#secondary { 
+    @include max-width;
+  }
+
+  .site-content {
+    max-width:  none;
+  }
+  
+  .entry-content {
+    & > * {
+      max-width: $page-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    & > *.width-wider {
+      width: 100%;
+      max-width: none;
+      @media (min-width: 1000px) {
+        max-width: 85%;
+        max-width: 85vw;
+      }
+    }
+    & > *.width-viewport {
+      width: 100%;
+      max-width: none;
+    }
+
+    .wp-block-image img {
+      display: block;
+    }
+
+    figure + figure {
+      margin-top: 0;
+    }
+  }
 }
 
 .entry-title {
