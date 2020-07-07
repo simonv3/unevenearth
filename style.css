@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-Theme Name: unevenearth 2020
+Theme Name: unevenearth 2020 
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
@@ -996,7 +996,30 @@ body.single-post {
   body.single-post .entry-content .wp-block-image img {
     display: block; }
   body.single-post .entry-content figure + figure {
-    margin-top: 0; }
+    margin-top: 1em; }
+  body.single-post .entry-content figure img {
+    width: 100%; }
+  body.single-post .entry-content figure + p,
+  body.single-post .entry-content .wp-block-gallery + p {
+    margin-top: 2em; }
+  body.single-post .entry-content p + figure,
+  body.single-post .entry-content p + .wp-block-gallery {
+    margin-top: 2em; }
+  body.single-post .entry-content figure + .wp-block-gallery {
+    margin-top: 1em; }
+  body.single-post .entry-content .wp-block-gallery {
+    margin-top: 2em; }
+    body.single-post .entry-content .wp-block-gallery .blocks-gallery-grid {
+      margin-bottom: 0;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between; }
+    body.single-post .entry-content .wp-block-gallery .blocks-gallery-item {
+      width: calc((100% - 1em)/2); }
+    body.single-post .entry-content .wp-block-gallery .blocks-gallery-item {
+      margin: 0; }
+    body.single-post .entry-content .wp-block-gallery .blocks-gallery-item + .blocks-gallery-item {
+      margin-left: 1em; }
 
 .entry-title {
   font-family: "Fira Sans OT", "Helvetica", sans-serif;
