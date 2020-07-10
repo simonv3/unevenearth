@@ -74,6 +74,12 @@ body.single-post {
         max-width: 85%;
         max-width: 85vw;
       }
+
+      figure, img {
+        max-height: 95vh;
+        object-fit: contain;
+        background: white;
+      }
     }
     & > *.width-viewport {
       width: 100%;

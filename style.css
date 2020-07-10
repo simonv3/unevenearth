@@ -990,6 +990,10 @@ body.single-post {
       body.single-post .entry-content > *.width-wider {
         max-width: 85%;
         max-width: 85vw; } }
+    body.single-post .entry-content > *.width-wider figure, body.single-post .entry-content > *.width-wider img {
+      max-height: 95vh;
+      object-fit: contain;
+      background: white; }
   body.single-post .entry-content > *.width-viewport {
     width: 100%;
     max-width: none; }
