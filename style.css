@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*!
-Theme Name: unevenearth
+Theme Name: unevenearth 2020 
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.0
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: unevenearth
@@ -640,9 +640,7 @@ a:focus {
     margin: 1rem 0 0; }
     .main-navigation li a {
       padding-left: 1rem; } }
-h1,
-h2,
-div {
+header#masthead {
   max-width: 840px;
   margin: 0 auto; }
 
@@ -885,7 +883,7 @@ footer {
   float: left;
   width: 558px;
   background: rgba(255, 255, 255, 0.9);
-  padding: 1rem .5rem .5rem 1rem;
+  padding: 1rem 1.5rem;
   position: absolute;
   height: 100%;
   border-bottom: none;
@@ -897,33 +895,13 @@ footer {
   .front-page .entry-info h2 {
     font-size: 1.5rem; }
   .front-page .entry-info .entry-title {
-    max-width: 350px;
     position: relative;
-    padding-top: .3rem;
-    display: inline-block; }
-    .front-page .entry-info .entry-title::before, .front-page .entry-info .entry-title::after {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: #ff3706;
-      content: '';
-      -webkit-transition: -webkit-transform 0.3s;
-      -moz-transition: -moz-transform 0.3s;
-      transition: transform 0.3s;
-      z-index: 99998; }
-    .front-page .entry-info .entry-title::after {
-      opacity: 0;
-      -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-      -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
-      transition: top 0.3s, opacity 0.3s, transform 0.3s; }
-    .front-page .entry-info .entry-title:hover::after, .front-page .entry-info .entry-title:focus::after {
-      top: 0%;
-      opacity: 1; }
+    margin-top: 0;
+    display: inline-block;
+    margin-bottom: 0.5em;
+    line-height: 1.25em; }
   .front-page .entry-info .entry-subtitle {
-    font-size: 1.2rem;
-    margin-top: .5rem; }
+    font-size: 1rem; }
   .front-page .entry-info .entry-meta {
     margin: 1rem 0 .5rem;
     opacity: 0;
@@ -938,14 +916,16 @@ footer {
     background-image: url("img/pattern2.png"); }
 
 .front-page-category {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   float: right;
-  font-family: "Fira Sans OT";
   font-weight: 100;
   margin-top: -.1rem;
   margin-right: .5rem;
   padding: .2rem 1rem 0;
-  border: 1px solid red; }
+  font-style: italic;
+  position: absolute;
+  left: .5rem;
+  bottom: 1.25rem; }
 
 @media (max-width: 480px) {
   .front-page .entry-info {
@@ -958,8 +938,9 @@ footer {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-p {
-  max-width: 630px; }
+.site-content {
+  max-width: 840px;
+  margin: 0 auto; }
 
 .sticky {
   display: block; }
@@ -984,12 +965,65 @@ figure img {
   .site-content {
     padding: .5rem; } }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 2rem 0 0;
-  max-width: 840px;
-  margin: 0 auto; }
+.page-content {
+  margin: 2rem 0 0; }
+
+body.single-post {
+  background: white; }
+  body.single-post .entry-header,
+  body.single-post .navigation.post-navigation,
+  body.single-post #disqus_thread,
+  body.single-post #comments,
+  body.single-post aside#secondary {
+    max-width: 840px;
+    margin: 0 auto; }
+  body.single-post .site-content {
+    max-width: none; }
+  body.single-post .entry-content > * {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto; }
+  body.single-post .entry-content > *.width-wider {
+    width: 100%;
+    max-width: none; }
+    @media (min-width: 1000px) {
+      body.single-post .entry-content > *.width-wider {
+        max-width: 85%;
+        max-width: 85vw; } }
+    body.single-post .entry-content > *.width-wider figure, body.single-post .entry-content > *.width-wider img {
+      max-height: 95vh;
+      object-fit: contain;
+      background: white; }
+  body.single-post .entry-content > *.width-viewport {
+    width: 100%;
+    max-width: none; }
+  body.single-post .entry-content .wp-block-image img {
+    display: block; }
+  body.single-post .entry-content figure + figure {
+    margin-top: 1em; }
+  body.single-post .entry-content figure img {
+    width: 100%; }
+  body.single-post .entry-content figure + p,
+  body.single-post .entry-content .wp-block-gallery + p {
+    margin-top: 2em; }
+  body.single-post .entry-content p + figure,
+  body.single-post .entry-content p + .wp-block-gallery {
+    margin-top: 2em; }
+  body.single-post .entry-content figure + .wp-block-gallery {
+    margin-top: 1em; }
+  body.single-post .entry-content .wp-block-gallery {
+    margin-top: 2em; }
+    body.single-post .entry-content .wp-block-gallery .blocks-gallery-grid {
+      margin-bottom: 0;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between; }
+    body.single-post .entry-content .wp-block-gallery .blocks-gallery-item {
+      width: calc((100% - 1em)/2); }
+    body.single-post .entry-content .wp-block-gallery .blocks-gallery-item {
+      margin: 0; }
+    body.single-post .entry-content .wp-block-gallery .blocks-gallery-item + .blocks-gallery-item {
+      margin-left: 1em; }
 
 .entry-title {
   font-family: "Fira Sans OT", "Helvetica", sans-serif;

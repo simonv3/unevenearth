@@ -47,7 +47,7 @@ $front-page-height: 240px;
     float: left;
     width: ($page-width / 3 * 2) - 2;
     background: rgba(255,255,255,0.9);
-    padding: 1rem .5rem .5rem 1rem;
+    padding: 1rem 1.5rem;
     position: absolute;
     height: 100%;
     border-bottom: none;
@@ -65,17 +65,15 @@ $front-page-height: 240px;
     }
 
     .entry-title {
-      max-width: 350px;
       position: relative;
-      padding-top: .3rem;
+      margin-top: 0;
       display: inline-block;
-
-      @include menu-hover-over-effect();
+      margin-bottom: 0.5em;
+      line-height: 1.25em;
     }
 
     .entry-subtitle {
-      font-size: 1.2rem;
-      margin-top: .5rem;
+      font-size: 1rem;
     }
 
     .entry-meta {
@@ -99,14 +97,16 @@ $front-page-height: 240px;
 }
 
 .front-page-category {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   float: right;
-  font-family: "Fira Sans OT";
   font-weight: 100;
   margin-top: -.1rem;
   margin-right: .5rem;
   padding: .2rem 1rem 0;
-  border: 1px solid red;
+  font-style: italic;
+  position: absolute;
+  left: .5rem;
+  bottom: 1.25rem;
 }
 
 @media (max-width: 480px) {

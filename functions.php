@@ -111,6 +111,33 @@ function unevenearth_widgets_init() {
 }
 add_action( 'widgets_init', 'unevenearth_widgets_init' );
 
+
+// Increase max srcset image_width from 1024 to 2048
+function max_srcset_image_width( $max_width ) {
+    return 2048;
+}
+add_filter( 'max_srcset_image_width', 'max_srcset_image_width');
+
+ function custom_image_sizes() {
+	add_image_size( '500w', 500, 0 );
+	add_image_size( '750w', 750, 0 );
+	add_image_size( '1000w', 1000, 0 );
+	add_image_size( '1250w', 1250, 0 );
+	add_image_size( '1400w', 1400, 0 );
+	add_image_size( '1550w', 1550, 0 );
+	add_image_size( '1750w', 1750, 0 );
+	add_image_size( '2000w', 2000, 0 );
+}
+
+add_action( 'after_setup_theme', 'custom_image_sizes');
+
+// Fix incorrectly sorted srcset
+add_filter( 'wp_calculate_image_srcset', 'filter_wp_calculate_image_srcset', 10, 5 ); 
+function filter_wp_calculate_image_srcset( $sources, $size_array, $image_src, $image_meta, $attachment_id ) { 
+	ksort($sources);
+    return $sources; 
+}; 
+
 /**
  * Enqueue scripts and styles.
  */
